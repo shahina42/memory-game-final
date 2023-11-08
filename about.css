@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.aboutbg {
+    background-image: url(images/aboutbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    font-family: "Lilita One";
+}
+
+h2 {
+    font-size: 50px;
+    margin-left: 500px;
+  padding-top: 60px;
+}
+
+p{
+    font-size: 30px;
+    margin-left: 350px;
+    padding: 30px;
+    line-height: 40px;
+    width: 750px;
+   
+}
+
+button {
+    height: 60px;
+    width: 150px;
+    background-color:#A0CAEC;
+    font-size: 20px;
+    color: white;
+    margin-left: 1050px;
+    margin-top: 150px;
+    font-family:"Lily Script One";
+    border: white 6px solid;
+    border-radius: 10px;
+      font-family: "Lilita One";
+      box-shadow:6px 6px 29px -4px #5ca1da;
+}
+    
+
+
+button:hover{
+
+    background-color:#5ca1da;
+    cursor: pointer;
+}
+
+img{
+    margin-left: 20px;
+}
+
+
+@media all and (max-width:450px){
+    body{
+        text-align: center;
+    }
+
+    .aboutbg {
+        background-image: url(images/Frame\ 1\ \(1\).png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: "Lilita One";
+    }
+
+    
+h2 {
+    font-size: 20px;
+    margin-left: 30px;
+  padding-top: 90px;
+  text-align: center;
+}
+
+p{
+    font-size: 15px;
+    margin-left: 60px;
+    padding: 20px;
+    line-height: 25px;
+    width: 200px;
+}
+
+button {
+    height: 40px;
+    width: 100px;
+    background-color:#A0CAEC;
+    font-size: 15px;
+    color: white;
+    margin-left:200px;
+    margin-top: 20px;
+    font-family:"Lily Script One";
+    border: white 4px solid;
+    border-radius: 10px;
+      font-family: "Lilita One";
+      box-shadow:6px 6px 29px -4px #5ca1da;
+}
+
+img{
+    width: 15px;
+}
+    
+
+}
