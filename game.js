@@ -6,10 +6,10 @@ let play=document.getElementById("PLAY");
 let result =document.getElementById("result");
 var scoreText = document.querySelector("#score")
 var finalScore = document.querySelector(".final-score")
-var nme = document.querySelector(".nick")
+var nme = document.querySelector("#nick")
 
 
-         
+
 // console.log(scoreText.innerHTML)
 let score = 0;
 
@@ -59,7 +59,7 @@ const random =()=>{
     const cards= pic();
     cards.sort(()=>Math.random()-0.5)
     return cards;
-};
+}; 
 
 //generateCard
 
@@ -90,6 +90,11 @@ const generateCard=()=>{
     })
 
 } 
+function checkWin(){
+    if(score===40){
+        won();
+    }
+}
 
 //check cards
 const checkCards= (e)=>{
@@ -110,6 +115,7 @@ const checkCards= (e)=>{
            aCard.style.pointerEvents = "none";
         
         })
+        checkWin()
     }else{
         console.log("wrong");
         flippedCards.forEach((aCard)=>{
@@ -121,7 +127,7 @@ const checkCards= (e)=>{
 
         
         document.getElementById("PLAY").addEventListener("click", () => {
-            
+            score=0;
             document.querySelector(".popup").style.display = "none";
             let cards=random();
             let faces = document.querySelectorAll(".face");
@@ -151,11 +157,7 @@ const checkCards= (e)=>{
             moves=8
 
         }
-        if (score===40 && moves>=0){
-            won();
-            moves=8  
-        }
-        
+        checkWin()
         
        
     }
@@ -169,14 +171,14 @@ const checkCards= (e)=>{
 
 
 generateCard();
-
+     
 
 function loose(){
     document.querySelector(".popup").style.display = "flex";
     finalScore.innerHTML=sessionStorage.getItem('score')
     const name1=sessionStorage.getItem('Nickname')
     console.log(sessionStorage.getItem('Nickname'))
-    result.innerText="YOU LOSE 🥺 " + name1;
+    result.innerText="YOU LOSE 🥺 "+name1;
      phrase.textContent=  lostgame();
      sessionStorage.clear()
 }
@@ -201,8 +203,10 @@ function displayQoute(){
 
 function won(){
     document.querySelector(".popup").style.display = "flex";
-    finalScore.innerHTML=sessionStorage.getItem('score')
-     result.innerText="YOU WON  🤗 ";
+    finalScore.innerHTML="40";
+    const name1=sessionStorage.getItem('Nickname')
+    console.log(sessionStorage.getItem('Nickname'))
+     result.innerText="YOU WON  🤗 "+name1;;
      phrase.textContent=  wingame();
      score=0
     
