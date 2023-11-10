@@ -12,16 +12,38 @@
 </head>
 
 <body>
-    <div class="gamebg">
 
-        <h3 class="time">TIME:</h3>
-        <h3 class="moves">MOVES:</h3>
-        <h3 class="score">SCORE:</h3>
-
-        <button type="reset">EXIT</button>
-
-
+    <h1>MOVES:<span class="lives"></span> </h1>
+    <h1>SCORE:<span id="score">0</span> </h1>
+    
+    <div class="game">
+        <section></section>
     </div>
+
+
+
+
+
+    <!-- <button type="reset">EXIT</button> -->
+
+
+    <div class="popup">
+
+        <div class="name">
+            <h2>GAME OVER</h2>
+            <br>
+            <h3 id="nick"></h3>
+            <p id="marks">Your Score: <span class="final-score"></span></p>
+            <p id="result"></p>
+            <p id="phrase"></p>
+
+            <button id="PLAY" >PLAY AGAIN</button>
+            
+        </div>
+    </div>
+
+    
+    <script src="game.js"></script>
 </body>
 
 </html>

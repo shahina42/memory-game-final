@@ -4,106 +4,212 @@
     font-family: "Lilita One";
 }
 
-.gamebg {
-    background-image: url(images/gamebg.png);
+body {
+    background-image: url("images/change.png");
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden ;
     width: 100%;
-    height: 100vh;
-
+    height: 100vh;   
 }
 
-h3{
+h3 {
     color: rgb(59, 59, 59);
     font-weight: lighter;
+    font-size: 30px;
+    margin-left: 150px;
+    padding-top: 10px;
+
+}
+h2{
+    font-weight: lighter;
+    font-size: 40px;
+    margin-left: 130px;
+}
+
+#result{
+    font-weight: lighter;
+    font-size: 40px;
+    margin-left: 140px;
 
 }
 
-.time{
-    margin-left: 1210px;
-    padding-top: 80px;
+#phrase{
+    font-weight: lighter;
+    font-size: 30px;
+    padding-top: 30px;
+   margin-left:150px ;
+   color: rgb(59, 59, 59);
 }
 
-.moves{
-    padding-top: 120px;
-    margin-left: 90px;
+#score{
+    font-weight: lighter;
+    font-size: 30px;
+   margin-left:10px ;
+   color: rgb(59, 59, 59);
 }
 
-.score{
-    margin-left: 90px;
-    padding-top: 130px;
+#marks{
+    font-weight: lighter;
+    font-size: 30px;
+   margin-left:150px ;
+   color: rgb(59, 59, 59);
+}
+
+h1{
+    color: rgb(59, 59, 59);
+    margin-left: 100px;
+    font-size: 30px;
+}
+
+
+button {
+    height: 50px;
+    width: 150px;
+    background-color: #A0CAEC;
+    font-size: 20px;
+    color: rgb(53, 50, 50);
+    margin-left: 170px;
+    margin-top: 30px;
+    border: white 4px solid;
+    border-radius: 10px;
     
 
 }
 
-button{
-    margin-left: 1150px;
-  width:150px ;
-  height:50px ;
-  background-color: white;
-  border-radius: 20px;
-  border: 6px solid #89c0ee;
-}
-
-p{
-    align-items: center;
-    text-align: center;
-   padding-top: 12px;
-}
-
-
-button :hover{
+button:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: 6px 6px 29px -4px rgb(95, 179, 218);
+    background-color: #5ca1da;
     cursor: pointer;
-   
 }
 
- @media all and (max-width:450px)
- {
-    body{
-        text-align: center;
-            }
-        
-            .gamebg {
-                background-image: url(images/playbg2.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                width: 100%;
-                height: 100vh;
-               
-        
-        }
-    
-.time{
-    margin-left: 0px;
-    padding-top: 80px;
-}
 
-.moves{
-    padding-top: 0px;
-    margin-left: 0px;
-}
 
-.score{
-    margin-left: 0px;
-    padding-top: 0px;
-    
-
-}
-
-.exit{
-    margin-left: 1150px;
-    margin-top: -150px;
-  width:150px ;
-  height:50px ;
-  background-color: white;
-  border-radius: 20px;
-  border: 10px solid #89c0ee;
-}
-
-p{
+.popup{
+    background: rgba(0,0, 0, 0.9);
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    display: none;
+    justify-content: center ;
     align-items: center;
-    text-align: center;
-   padding-top: 12px;
 }
 
-    }  
+.name{
+    font-family: "Lilita One";
+    width: 500px;
+    height: 400px;
+    background-color: #bde1ff;
+    border-radius: 10px;
+    border: 15px solid white;
+}
+
+
+section{
+    display:grid;
+    grid-template-columns: repeat(4,8rem);
+    grid-template-rows:repeat(4,8rem);
+    grid-gap: 1rem;
+   perspective:800px ;
+
+}
+
+.face,.back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+}
+.aCard{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: rgba(0, 0, 0, 0.9) 0px 5px 15px;   
+}
+.back{
+    background: url(images/whalep.jpg);
+    background-size: cover;
+    backface-visibility: hidden;
+}
+.game{
+    /* width: 200px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+}
+
+.toggleaCard{
+    transform:rotateY(180deg);
+}
+
+
+
+/* 
+@media all and (max-width:450px) {
+ 
+
+    h3 {
+        font-size: 12px;
+
+
+    }
+
+    body {
+        background-image: url(images/playbg2.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        font-family: "Lilita One";
+
+
+    }
+
+    .time {
+        margin-left: 90%;
+        margin-top: 15%;
+      width: 60px;
+      height: 50px;
+      border: black 2px solid;
+    text-align: center;
+    }
+    
+    .moves {
+        margin-top: 4%;
+        margin-left: 3%;
+        width: 150px;
+        height: 100px;
+        border: black 2px solid;
+        text-align: center;
+    }
+    
+    .score {
+      
+        margin-top: 3%;
+        margin-left: 3%;
+        width: 150px;
+        height: 100px;
+        border: black 2px solid;
+        text-align: center;
+    }
+    
+
+    button {
+
+        height: 30px;
+        width: 70px;
+        background-color: #A0CAEC;
+        font-size: 12px;
+        color: rgb(53, 50, 50);
+        margin-left: 350px;
+        margin-top: 40px;
+        border: white 4px solid;
+        border-radius: 10px;
+    
+    
+    }
+  
+} */
