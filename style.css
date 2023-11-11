@@ -114,7 +114,7 @@ input::placeholder{
 
     h1{
         font-size: 40px;
-        margin-left: 50px;
+        margin-left: 5px;
       padding-top: 200px;
         font-family:"Lily Script One";
         text-align: center;
@@ -128,7 +128,7 @@ input::placeholder{
         background-color:#A0CAEC;
         font-size: 20px;
         color: white;
-        margin-left: 90px;
+        margin-left: 100px;
         margin-top: 0px;
         font-family:"Lily Script One";
         border: white 6px solid;

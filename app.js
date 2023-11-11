@@ -32,20 +32,3 @@ button.addEventListener('click', () => {
 
 
 
-
-// const button = document.querySelector("#sub");
-
-// button.addEventListener('click', () => {
-//     const fullName = document.querySelector(".in1").value;
-// const nickName = document.querySelector(".in2").value;
-//     sessionStorage.setItem('Fullname', fullName);
-//     sessionStorage.setItem('Nickname', nickName);
-//     window.location.href = "about.html"
-  
-// });
-
-// var test = sessionStorage.getItem('Fullname');
-// console.log(test);
-
-
-
